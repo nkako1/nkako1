@@ -69,7 +69,7 @@
             // Play video on open:
             $('video').trigger('play');
 
-        }
+        },
         close: function() {
 
             // Reset video on close:
