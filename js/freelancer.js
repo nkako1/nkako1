@@ -62,8 +62,24 @@
     focus: '#username',
     modal: true,
     removalDelay: 300,
-    mainClass: 'mfp-fade'
+    mainClass: 'mfp-fade',
+    callbacks: {
+        open: function() {
+
+            // Play video on open:
+            $('video').trigger('play');
+
+        }
+        close: function() {
+
+            // Reset video on close:
+            $(this.content).find('video')[0].load();
+
+        }
+
+    }
   });
+
   $(document).on('click', '.portfolio-modal-dismiss', function(e) {
     e.preventDefault();
     $.magnificPopup.close();
