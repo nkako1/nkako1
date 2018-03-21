@@ -3,7 +3,7 @@
 
 
   $(document).ready(function() {
-    $('#main-content').fadeIn(800);
+    $('#main-content').fadeIn(600);
   });
 
   // Smooth scrolling using jQuery easing
