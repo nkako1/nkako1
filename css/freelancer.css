@@ -296,6 +296,41 @@ section {
   }
 }
 
+#headshot-link {
+  font-size: 18px;
+  border-bottom: 1px #820263 dashed;
+  cursor: pointer;
+  width: 40px;
+}
+
+#headshot-link > img {
+  opacity: 0;
+  position: absolute;
+  right: 9%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#headshot-link:hover > img {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  right: 10%;
+}
+#headshot-link > img:hover {
+  opacity: 0;
+  cursor: auto;
+}
+
+@media (max-width: 767px) {
+  #headshot-link:hover > img {
+    opacity: 0;
+  }
+}
+
+
 #work {
   margin-bottom: 0px;
 }
