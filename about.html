@@ -55,7 +55,7 @@
     <div id="main-content">
 
       <section id="about">
-          <p>Hey, I'm <a id="headshot-link"><img width="30%" src="img/headshot.jpeg" />Nora</a>. I'm currently doing some freelance design &#38; front-end dev based in San Francisco. I'm interested in how well-designed experiences can shape how we interact with technology.
+          <p>Hey, I'm <a id="headshot-link"><img data-src="img/headshot.jpeg" class="img-responsive" width="30%" alt="">Nora</a>. I'm currently doing some freelance design &#38; front-end dev based in San Francisco. I'm interested in how well-designed experiences can shape how we interact with technology.
           <br><br>
           Before this, I spent a few years designing for LiveRamp, a B2B adtech company.
           <br><br>
@@ -67,7 +67,16 @@
 
     </div>
 
-        <!-- Bootstrap core JavaScript -->
+    <script>
+      [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = function() {
+          img.removeAttribute('data-src');
+        };
+      });
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
