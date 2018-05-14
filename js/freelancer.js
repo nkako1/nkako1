@@ -73,7 +73,7 @@
         close: function() {
 
             // Reset video on close:
-            $(this.content).find('video')[0].load();
+            $('video').trigger('load');
 
         }
 
