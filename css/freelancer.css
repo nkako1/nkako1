@@ -31,7 +31,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #820263;
+  color: #820263; 
   outline: none;
   text-decoration: none;
 }
@@ -394,6 +394,71 @@ section {
   font-size: 24px;
 }
 
+/*MINDFUL MAMAS*/
+
+#case-study-bg-mindful-mamas {
+  height: 80vh;
+  background: rgba(249,173,170,0);
+  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
+  transition: background 0.35s, -webkit-transform 0.35s;
+  -o-transition: background 0.35s, transform 0.35s;
+  transition: background 0.35s, transform 0.35s;
+  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+#case-study-bg-mindful-mamas:hover {
+  background: rgba(249,173,170,0.2);
+  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
+  transition: background 0.35s, -webkit-transform 0.35s;
+  -o-transition: background 0.35s, transform 0.35s;
+  transition: background 0.35s, transform 0.35s;
+  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+#mindful_mamas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  -o-transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+      transform: scale(1.05);
+}
+
+#case-study-bg-mindful-mamas:hover #mindful_mamas {
+  opacity: 0.7;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+      transform: scale(1);
+}
+
+#mindful_mamas #n-mobile {
+}
+
+#mindful_mamas #n-desktop {
+  position: absolute;
+  width: 120%;
+  left: -10%;
+}
+
+#mindful-mamas-header {
+  background: #F9ADAA;
+}
+
+/*NOTIFICATIONS*/
+
 #case-study-bg-notifications {
   height: 80vh;
   background: rgba(74,144,226,0);
@@ -455,6 +520,9 @@ section {
   margin-top: 10%;
   margin-left: 19%;
 }
+
+/*KODOS*/
+
 #case-study-bg-kodos {
   height: 80vh;
   background: rgba(58,207,35,0);
@@ -491,6 +559,9 @@ section {
   -ms-transform: scale(1);
       transform: scale(1);
 }
+
+/*INGESTION*/
+
 #case-study-bg-ingestion {
   height: 80vh;
   background: rgba(225,202,0,0);
@@ -550,7 +621,8 @@ section {
   margin: 0 auto;
 }
 
-#work .portfolio-item .caption {
+#work .portfolio-item .portfolio-item-caption {
+  z-index: 1;
   color:#000;
   position: absolute;
   top: 5%;
@@ -561,7 +633,8 @@ section {
   transition: opacity 0.35s;
 }
 
-#work .portfolio-item:hover .caption {
+#work .portfolio-item:hover .portfolio-item-caption {
+  z-index: 1;
   opacity: 1;
   -webkit-transition: opacity 0.35s;
   -o-transition: opacity 0.35s;
@@ -916,7 +989,7 @@ footer #sign-off p, #sign-off p > a {
   color:#820263;
 }
 
-footer p, p > a {
+footer p, footer a{
   text-align: center;
   font-size: 12px;
   color: #838383;
@@ -926,6 +999,7 @@ footer p, p > a {
 
 a {
   color: #18BC9C;
+  font-size: inherit;
 }
 
 a:focus, a:hover, a:active {
