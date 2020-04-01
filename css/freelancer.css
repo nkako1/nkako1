@@ -19,13 +19,6 @@ p, ul, li {
   color: #838383;
 }
 
-@media (max-width: 767px) {
-  p {
-    font-size:16px;
-    line-height: 24px;
-  }
-}
-
 a,
 a:hover,
 a:focus,
@@ -89,31 +82,10 @@ header p {
   line-height: 42px;
 }
 
-
-@media (min-width: 768px) {
-  header .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
-  }
-  header .intro-text .name {
-    font-size: 4.75em;
-  }
-  header .intro-text .skills {
-    font-size: 1.75em;
-  }
-}
-
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
   padding: 0 10%;
 }
 
@@ -130,16 +102,6 @@ section {
       -ms-flex: 1 100%;
           flex: 1 100%;
 }
-
-@media (max-width: 767px) {
-  section {
-    padding: 10% 10%;
-  }
-  section.first {
-    padding-top: 75px;
-  }
-}
-
 .btn-xl {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
@@ -229,47 +191,7 @@ section {
   outline: none;
 }
 
-@media (min-width: 992px) {
-  #mainNav {
-    padding: 80px 0;
-    -webkit-transition: padding 0.3s;
-    -o-transition: padding 0.3s;
-    transition: padding 0.3s;
-  }
-  #mainNav .navbar-brand {
-    font-size: 16px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  #mainNav .navbar-nav {
-    margin-top: 0;
-  }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-    color: #820263;
-  }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-    color: #820263;
-  }
-  #mainNav.navbar-shrink {
-    padding: 50px 0;
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    font-size: 21px;
-  }
-}
 
-@media (max-width: 992px) {
-  #mainNav {
-    padding: 50px 0;
-    -webkit-transition: padding 0.3s;
-    -o-transition: padding 0.3s;
-    transition: padding 0.3s;
-  }
-  #mainNav .navbar-nav li.nav-item a.nav-link {
-    text-align: right;
-  }
-}
 
 #about {
     bottom: 0;
@@ -289,11 +211,7 @@ section {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
 }
-@media (max-width: 767px) {
-  #about {
-    max-width: 90%;
-  }
-}
+
 
 #headshot-link {
   font-size: 18px;
@@ -323,15 +241,10 @@ section {
   cursor: auto;
 }
 
-@media (max-width: 767px) {
-  #headshot-link:hover > img {
-    opacity: 0;
-  }
-}
-
 
 #work {
   margin-bottom: 0px;
+  padding: 0 9%;
 }
 
 #work .section-header{
@@ -343,77 +256,25 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #f5f5f5;
-  -webkit-clip-path: inset(0px 0px 0px 0px);
-          clip-path: inset(0px 0px 0px 0px);
+  flex-direction: column;
   width: 100%;
-  padding:40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
-}
-@media (max-width: 767px) {
-  .case-study {
-    margin: 0 0 50px 0;
-  }
-
-  #work .portfolio-item {
-    max-height: 50vh;
-
-  }
-}
-
-@media (min-width: 767px) {
-  #work .portfolio-item {
-    margin: 0 0 0px;
-  }
 }
 
 #work .portfolio-item .portfolio-item-caption {
   color:#000;
-  position: absolute;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.35s;
-  -o-transition: opacity 0.35s;
-  transition: opacity 0.35s;
-  left:5%;
-  top:8%;
 }
 
 #work .portfolio-item:hover .portfolio-item-caption {
   opacity: 1;
-  -webkit-transition: opacity 0.35s;
-  -o-transition: opacity 0.35s;
-  transition: opacity 0.35s;
 }
 #work .portfolio-item .portfolio-item-caption h3 {
-  font-size: 24px;
+  font-size: 20px;
+  margin: 0;
 }
 
 /*MINDFUL MAMAS*/
 
-#case-study-bg-mindful-mamas {
-  height: 80vh;
-  background: rgba(249,173,170,0);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
-
-#case-study-bg-mindful-mamas:hover {
-  background: rgba(249,173,170,0.2);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
 #mindful_mamas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -432,25 +293,13 @@ section {
   -o-transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-      transform: scale(1.05);
-}
 
-#case-study-bg-mindful-mamas:hover #mindful_mamas {
-  opacity: 0.7;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-      transform: scale(1);
 }
 
 #mindful_mamas #n-mobile {
 }
 
 #mindful_mamas #n-desktop {
-  position: absolute;
-  width: 120%;
-  left: -10%;
 }
 
 #mindful-mamas-header {
@@ -459,24 +308,15 @@ section {
 
 /*NOTIFICATIONS*/
 
-#case-study-bg-notifications {
-  height: 80vh;
-  background: rgba(74,144,226,0);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
+.portfolio-item {
+  transition: all ease 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
-#case-study-bg-notifications:hover {
-  background: rgba(74,144,226,0.2);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
+.portfolio-item:hover {
+  transition: all ease 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  opacity: 0.7;
 }
+
 #notifications_solution {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -495,91 +335,11 @@ section {
   -o-transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-      transform: scale(1.05);
 }
 
-#case-study-bg-notifications:hover #notifications_solution {
-  opacity: 0.7;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-      transform: scale(1);
-}
-
-#notifications_solution #n-mobile {
-  z-index: 1;
-  width: 20%;
-  margin-bottom: -46%;
-  margin-left: 24%;
-}
-
-#notifications_solution #n-desktop {
-  position: absolute;
-  width: 96%;
-  margin-top: 10%;
-  margin-left: 19%;
-}
-
-/*KODOS*/
-
-#case-study-bg-kodos {
-  height: 80vh;
-  background: rgba(58,207,35,0);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
-#case-study-bg-kodos:hover {
-  background: rgba(58,207,35,0.2);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
-#case-study-bg-kodos img {
-  width: 82%;
-  margin-top: 42%;
-  opacity: 1;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  -o-transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-      transform: scale(1.05);
-}
-#case-study-bg-kodos:hover img {
-  opacity: 0.7;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-      transform: scale(1);
-}
 
 /*INGESTION*/
 
-#case-study-bg-ingestion {
-  height: 80vh;
-  background: rgba(225,202,0,0);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
-
-#case-study-bg-ingestion:hover {
-  background: rgba(225,202,0,0.2);
-  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-  transition: background 0.35s, -webkit-transform 0.35s;
-  -o-transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s;
-  transition: background 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
 
 #ingestion_solution {
   opacity: 1;
@@ -588,19 +348,12 @@ section {
   -o-transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-      transform: scale(1.05);
   position: absolute;
-  width: 98%;
-  right: -150px;
-  top: 150px;
-}
-#case-study-bg-ingestion:hover #ingestion_solution {
-  opacity: 0.7;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-      transform: scale(1);
+  width: 80%;
+  top: 96px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #ingestion_solution img {
@@ -622,29 +375,28 @@ section {
 }
 
 #work .portfolio-item .portfolio-item-caption {
-  z-index: 1;
-  color:#000;
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.35s;
-  -o-transition: opacity 0.35s;
-  transition: opacity 0.35s;
+      display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 #work .portfolio-item:hover .portfolio-item-caption {
-  z-index: 1;
-  opacity: 1;
-  -webkit-transition: opacity 0.35s;
-  -o-transition: opacity 0.35s;
-  transition: opacity 0.35s;
 }
 
-@media (min-width: 767px) {
-  #work .portfolio-item {
-    margin: 0 0 0px;
-  }
+
+.thumbnail {
+  width: 100%;
+}
+
+
+.reduct-video {
+  position: absolute;
+  width: 57%;
+  left: 0;
+  right: 0;
+  margin: 109vw auto auto auto;
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 /**************** MODAL STYLES ****************/
@@ -676,10 +428,11 @@ section {
   cursor: pointer;
   width: 50px;
   height: 50px;
+  z-index: 100;
 }
 
 .portfolio-modal .portfolio-modal-dialog .close-button:hover {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .portfolio-modal .portfolio-modal-dialog .close-button .lr {
   height: 40px;
@@ -709,6 +462,15 @@ section {
   font-size: 2rem;
 }
 
+#portfolio-modal-1 .close-button .lr, 
+#portfolio-modal-6 .close-button .lr,
+#portfolio-modal-1 .close-button .lr .rl, 
+#portfolio-modal-6 .close-button .lr .rl {
+  background-color: #fff;
+}
+
+
+
 /**************** CASE STUDY STYLES ****************/
 
 .case-study {
@@ -716,12 +478,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 0 200px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1%;
+  width: 48%;
 }
 
 .case-study:last-child {
@@ -756,6 +519,7 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+            align-items: center;
 }
 
 .case-study-section.header h2 {
@@ -766,25 +530,6 @@ section {
 
 .case-study-section.header p {
   color: #f5f5f5;
-}
-
-@media (max-width: 767px) {
-  .case-study-section {
-    padding: 40px;
-  }
-  .case-study-section.header {
-    height: 20vh;
-  }
-  .case-study-section.header h2 {
-    font-size: 3em;
-  }
-  #notifications-badge { 
-    margin-right: -350px;
-    margin-top: -45px;
-    -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-            transform: scale(0.8);
-  }
 }
 
 .case-study-section.full{
@@ -857,19 +602,6 @@ section {
   width: 50%;
 }
 
-@media (max-width: 767px) {
-  .case-study-requirement {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
-  .case-study-requirement img, #portfolioModal3 .case-study-requirement img {
-    width: 100%;
-    margin: 0 0 50px;
-  }
-}
-
 .case-study-decision-title {
   font-weight: 400;
   text-align: left;
@@ -915,19 +647,6 @@ section {
           justify-content:center;
 }
 
-@media (max-width: 767px) {
-  .case-study-decision {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
-  .case-study-decision img {
-    width: 100%;
-    margin: 50px 0 0 0;
-  }
-}
-
 #notifications-header {
   background: #4A90E2;
 }
@@ -958,7 +677,7 @@ section {
 }
 
 #ingestion-header {
-  background: #FFCA00;
+  background: #E2F0CC;
 }
 
 /**************** FOOTER STYLES ****************/
@@ -1078,4 +797,151 @@ a:focus, a:hover, a:active {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 767px) {
+  p {
+    font-size:16px;
+    line-height: 24px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 10% 10%;
+  }
+  section.first {
+    padding-top: 75px;
+  }
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding: 80px 0;
+    -webkit-transition: padding 0.3s;
+    -o-transition: padding 0.3s;
+    transition: padding 0.3s;
+  }
+  #mainNav .navbar-brand {
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #mainNav .navbar-nav {
+    margin-top: 0;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+    color: #820263;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+    color: #820263;
+  }
+  #mainNav.navbar-shrink {
+    padding: 50px 0;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 992px) {
+  #mainNav {
+    padding: 50px 0;
+    -webkit-transition: padding 0.3s;
+    -o-transition: padding 0.3s;
+    transition: padding 0.3s;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link {
+    text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  #about {
+    max-width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  #work {
+    margin: 0 0 0px;
+    flex-direction: column;
+  }
+  .case-study {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  #headshot-link:hover > img {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-section {
+    padding: 40px;
+  }
+  .case-study-section.header {
+    height: 20vh;
+  }
+  .case-study-section.header h2 {
+    font-size: 3em;
+  }
+  #notifications-badge { 
+    margin-right: -350px;
+    margin-top: -45px;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-requirement {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .case-study-requirement img, #portfolioModal3 .case-study-requirement img {
+    width: 100%;
+    margin: 0 0 50px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .case-study-decision {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .case-study-decision img {
+    width: 100%;
+    margin: 50px 0 0 0;
+  }
+}
+@media (min-width: 767px) {
+  #work .portfolio-item {
+    margin: 0 0 0px;
+  }
 }
